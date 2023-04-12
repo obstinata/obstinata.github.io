@@ -9,7 +9,6 @@ body {
     font-weight: 400;
     font-size: 36px;
     margin: 0;
-    color: #0000ff;
     text-align: center;
   }
 
@@ -24,13 +23,13 @@ body {
     max-width: 540px;
     margin: 0 auto;
   }
-  @media (min-width: 850px) {
+  @media (min-width: $medium) {
     main {
       max-width: 100%;
       padding: 30px;
     }
   }
-  @media (min-width: 1180px) {
+  @media (min-width: $large) {
     main {
       max-width: 1130px;
     }
@@ -77,7 +76,7 @@ body {
   .column:not(:last-child) {
     margin-bottom: 30px;
   }
-  @media (min-width: 850px) {
+  @media (min-width: $medium) {
     .flex-grid {
       display: flex;
       flex-direction: row;

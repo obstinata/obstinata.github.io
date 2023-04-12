@@ -1,7 +1,8 @@
 header {
-    background-color: #ffc0cb;
+    background-color: $primary-color;
     display: flex;
     justify-content: center;
     height: 50px;
+    color: $text-color;
     
 }

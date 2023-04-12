@@ -1,8 +1,9 @@
 footer {
-    background-color: #90ee90;
+    background-color: $primary-color;
     display: flex;
     justify-content: center;
     height: 50px;
+    color: $text-color;
     
 }
 
