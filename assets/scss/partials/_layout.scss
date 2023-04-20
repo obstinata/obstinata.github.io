@@ -5,9 +5,8 @@ body {
     height: 100svh;
   }
   h1 {
-    font-family: Arial, sans-serif;
-    font-weight: 400;
-    font-size: 36px;
+    @include mainFont;
+    @include fontLarge;
     margin: 0;
     text-align: center;
   }
@@ -22,15 +21,11 @@ body {
     padding: 30px 20px;
     max-width: 540px;
     margin: 0 auto;
-  }
-  @media (min-width: $medium) {
-    main {
+    @media (min-width: $medium) {
       max-width: 100%;
       padding: 30px;
     }
-  }
-  @media (min-width: $large) {
-    main {
+    @media (min-width: $large) {
       max-width: 1130px;
     }
   }
@@ -41,7 +36,7 @@ body {
     position: relative;
     background: #ccc;
     overflow: hidden;
-    padding-bottom: 100%;
+    padding-bottom: ratio(16, 9);
   }
 
   img {
@@ -67,6 +62,13 @@ body {
     font-family: Arial, sans-serif;
     font-size: 20px;
   }
+
+
+.main-p {
+  @include mainFont;
+  @include fontMedium;
+}
+
   .flex-grid {
     width: 100%;
   }

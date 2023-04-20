@@ -1,0 +1,19 @@
+@mixin mainFont {
+    font-family: Futura, sans-serif;
+}
+
+@mixin fontSmall {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+@mixin fontMedium {
+    font-size: 20px;
+    line-height: 1.15;
+}
+
+@mixin fontLarge {
+    font-size: 27px;
+    line-height: 1.15;
+    font-weight: 700;
+}

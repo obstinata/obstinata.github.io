@@ -2,7 +2,12 @@ header {
     background-color: $primary-color;
     display: flex;
     justify-content: center;
-    height: 50px;
+    height: rem(50);
     color: $text-color;
     
+}
+
+.header-h1 {
+    @include fontSmall;
+    @include mainFont;
 }
