@@ -1,13 +1,63 @@
 header {
     background-color: $primary-color;
     display: flex;
-    justify-content: center;
-    height: rem(50);
+    justify-content: space-between;
+    //height: rem(10);
     color: $text-color;
+    position: fixed;
+    width: 100%;
+    padding: 20px 100px 20px 100px;
+    align-items: center;
+    z-index: 100;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        &.active {
+            text-decoration: underline;
+        }
+    }
+
+    li {
+        display: inline-block;
+    }
+
+
+    ul {
+        display: flex;
+        column-gap: 30px;
+        list-style-type: none;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    
+        a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+      }
+      
+      nav li.dropdown:hover .dropdown-content {
+         display: block;
+      }
+
+      h1 {
+        @include mainFont;
+    } 
     
 }
 
-.header-h1 {
-    @include fontSmall;
-    @include mainFont;
-}
+
+  
+
+
+

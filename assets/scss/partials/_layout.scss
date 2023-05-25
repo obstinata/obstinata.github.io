@@ -3,6 +3,17 @@ body {
     flex-direction: column;
     margin: 0;
     height: 100svh;
+    &.about{
+      background: pink;
+    }
+
+    &.contacts {
+      background: violet;
+    }
+
+    &.home {
+      background: lightblue;
+    }
   }
   h1 {
     @include mainFont;
@@ -12,7 +23,7 @@ body {
   }
 
   main {
-    background: #fff;
+    //background: #fff;
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -51,7 +62,7 @@ body {
 
 
   p {
-    font-family: Arial, sans-serif;
+    font-family: Work Sans;
     font-size: 14px;
     line-height: 1.4;
     text-align: center;
@@ -59,7 +70,7 @@ body {
   }
   header,
   footer {
-    font-family: Arial, sans-serif;
+    font-family: Work Sans;
     font-size: 20px;
   }
 
