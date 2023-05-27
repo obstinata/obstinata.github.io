@@ -2,7 +2,6 @@ header {
     background-color: $primary-color;
     display: flex;
     justify-content: space-between;
-    //height: rem(10);
     color: $text-color;
     position: fixed;
     width: 100%;
@@ -14,6 +13,9 @@ header {
         color: #fff;
         text-decoration: none;
         display: block;
+        &.hover {
+            color: #000;
+        }
         &.active {
             text-decoration: underline;
         }
@@ -51,7 +53,7 @@ header {
       }
 
       h1 {
-        @include mainFont;
+        @include fontLarge;
     } 
     
 }

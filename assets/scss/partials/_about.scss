@@ -1,0 +1,25 @@
+main {
+
+    @media (min-width: $large) {
+
+       /* img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            border-radius: 50%;
+            margin-right: auto; 
+            }
+        }
+        */
+
+    a {
+        text-decoration: none;
+        &:hover {
+           color: tomato;
+        }
+       }
+
+}
+}

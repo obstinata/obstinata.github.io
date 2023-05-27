@@ -3,17 +3,23 @@
 }
 
 @mixin fontSmall {
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+@mixin fontSmallBold {
+    font-weight: 600;
     font-size: 16px;
 }
 
 @mixin fontMedium {
     font-size: 20px;
+    font-weight: 600;
     line-height: 1.15;
 }
 
 @mixin fontLarge {
-    font-size: 27px;
+    font-size: 32px;
     line-height: 1.15;
-    font-weight: 700;
+    font-weight: 600;
 }
