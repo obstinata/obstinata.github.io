@@ -1,19 +1,17 @@
 body {
-  //height: 100svh;
+  height: 100svh;
   margin: 0;
-  //width: 100%;
+  display: flex;
+  flex-direction: column;
 
   header {
     h1 {
-    @include fontLarge;
-  }
-
-    ul {
-  @include fontSmallBold;
-
+      @include fontLarge;
     }
+
   }
-  &.about{
+
+  &.about {
     background: pink;
   }
 
@@ -22,7 +20,8 @@ body {
   }
 
   &.home {
-    background: lightblue;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(204,179,255,1) 100%);
   }
 
   h1 {
@@ -32,113 +31,225 @@ body {
     text-align: center;
   }
 
+  h2 {
+    @include mainFont;
+    @include fontLarge;
+  }
+
+  p {
+    @include mainFont;
+    @include fontSmall;
+  
+  }
+
+
   .grid-container {
-    position: absolute;
-    align-items: center;
-    background-color: lightgray;
-    padding: 0 100px 0 100px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh 70vh 70vh;
 
-    p {
-      @include fontSmall;
-    }
-    
-    .box {
-      background-color: bisque;
-      padding: 40px;
-      height: 300px;
-      width: 700px;
+
+    @media (min-width: $large) {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 72px;
     }
 
-    >section {
-      background: gray;
-      padding: 150px;
-      border: 1px solid brown;
-      h2 {
-        @include fontLarge;
-      }
-      &:nth-child(1) {
-        grid-column: 1 / span 6;
-        height: 100vh;
-        position: relative;
-        top: 80px;
+    section {
+      //background: gray;
+      //border: 1px solid brown;
+
+      &.intro {
+        padding: 0px 20px 0 20px;
+        grid-row: 1;
         display: flex;
         align-items: center;
         justify-content: center;
+        h2 {
+          @include fontLarge;
+          color: $text-color;
+      
+        }
+        @media (min-width: $large) {
+          grid-column: 1 / span 6;
+          grid-row: 1;
+          padding: 0px 300px 0 300px;
+        }
+      }
+      
+
+      &.project-1 {
+        grid-row: 2;
+        background-image: url(/assets/images/project1.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (min-width: $large) {
+          justify-content: end;
+        }
+
+        h2 {
+          @include fontMedium;
+        }
+
+        @media (min-width: $large) {
+          background-position: left;
+          background-size: 60%;
+          grid-column: span 6;
+
+          &.box {
+            justify-self: end;
+          }
+
+        }
       }
 
-      &:nth-child(2) {
-        grid-column: span 6;
+      &.project-2 {
+        grid-row: 3;
+        background-image: url(/assets/images/project2.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (min-width: $large) {
+          justify-content: start;
+        }
+
+        h2 {
+          @include fontMedium;
+        }
+
+        @media (min-width: $large) {
+          grid-column: span 6;
+          background-position: right;
+          background-size: 60%;
+
+        }
+      }
+
+      &.about {
+        padding: 150px 20px 0 20px;
+
+        &.profile-pic {
+          grid-row: 1;
+        }
+
+        &.about-text {
+          grid-row: 2;
+        }
+
+      }
+
+    }
+  }
+
+
+}
+
+
+
+
+/* 
+
+  p {
+    @include fontSmall;
+  }
+
+  .grid-container {
+    position: absolute;
+    align-items: center;
+    height: 100vh;
+    background-color: lightgray;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+
+
+
+    section {
+      background: gray;
+      padding: 20px;
+
+      @media (min-width: $medium) {
+        padding: 100px;
+      }
+
+      border: 1px solid brown;
+
+      h2 {
+        @include mainFont;
+        @include fontLarge;
+      }
+
+      &.intro {
+        height: 100vh;
+        position: relative;
+        grid-row: 1fr;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50px;
+
+      }
+
+      &.project-1 {
         position: relative;
         display: flex;
+        grid-row: 2fr;
+
         &.spotify {
           position: relative;
         }
+
         h2 {
           @include fontMedium;
         }
       }
 
-      &:nth-child(3) {
-        grid-column: span 6;
+      &.project-2 {
         position: relative;
         display: flex;
+        grid-row: 3fr;
+
         &.artology {
           position: relative;
         }
+
         h2 {
           @include fontMedium;
         }
       }
+
+
+
+      &.about {
+        grid-column: 1 / span 6;
+        position: relative;
+      }
     }
 
-  }
-}
+    @media (min-width: $medium) {
+      .grid-container {
+        grid-template-columns: repeat(6, 1fr);
 
-
-  /* @media (min-width: $large) {
-  .grid-container {
-    background-color: lightgray;
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-    gap: 50px;
-    padding: 100px;
-    overflow: hidden;
-  }
-
-  .intro {
-    grid-column-start: 1;
-    grid-column-end: 6;
-  }
-
-  .project-1 {
-    grid-column-start: 1;
-    grid-column-end: 6;
-  }
-
-  .project-2 {
-    grid-column-start: 1;
-    grid-column-end: 6;
-  }
-
-  .about-text {
-    order: 2;
-    grid-column-start: 3;
-    grid-column-end: 6;
-  }
-
-
-  .profile-pic {
-    order: 0;
-    grid-column-start: 1;
-    grid-column-end: 3;
+        section {
+          &.intro {
+            grid-column: 1 / span 6;
+            top: 0;
+          }
+        }
+      }
+    }
   }
 
 }
-}
+
 */
 
 

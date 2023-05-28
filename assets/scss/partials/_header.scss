@@ -1,23 +1,28 @@
 header {
-    background-color: $primary-color;
     display: flex;
     justify-content: space-between;
     color: $text-color;
     position: fixed;
     width: 100%;
-    padding: 20px 100px 20px 100px;
+    padding: 20px;
     align-items: center;
     z-index: 100;
 
+    @media (min-width: $large) {
+        padding: 20px 100px 20px 100px;
+        }
+
     a {
-        color: #fff;
+        color: $text-color;
         text-decoration: none;
         display: block;
-        &.hover {
-            color: #000;
+
+        &:hover {
+            color: $primary-color;
         }
+
         &.active {
-            text-decoration: underline;
+            text-decoration: 2.5px wavy overline $primary-color;
         }
     }
 
@@ -30,36 +35,39 @@ header {
         display: flex;
         column-gap: 30px;
         list-style-type: none;
+        margin: 0;
+        @include fontSmallBold;
+        @include mainFont;
     }
 
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #f9f9f9;
-        min-width: 200px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        background-color: $primary-color;
+        min-width: auto;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         z-index: 1;
-    
+
         a {
-            color: #333;
+            color: white;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
-          }
-      }
-      
-      nav li.dropdown:hover .dropdown-content {
-         display: block;
-      }
 
-      h1 {
+            &:hover {
+                background-color: $text-color;
+                color: red;
+            }
+        }
+    }
+
+    nav li.dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    h1 {
         @include fontLarge;
-    } 
-    
+        @include mainFont;
+    }
+
 }
-
-
-  
-
-
-

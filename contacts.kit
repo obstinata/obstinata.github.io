@@ -1,12 +1,28 @@
 <!-- @import partials/head-->
 <!-- @import partials/header-->
 
-<body>
-    <main class="grid-container">
-        <h1>Contacts</h1>
-        <p class="main-p">Texto do sobre</p>
+<main>
+    <div class="grid-container">
+        <div class="contacts">
+            <form action="action_page.php">
+          
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="mail">E-mail</label>
+              <input type="text" id="mail" name="email" placeholder="example@email.com">
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div>
+    </div>
     </main>
-<!-- @import partials/footer-->
+    <!-- @import partials/footer-->
 
 </body>
+
 </html>

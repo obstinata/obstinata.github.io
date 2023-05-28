@@ -1,8 +1,8 @@
-main {
 
-    @media (min-width: $large) {
+.about {
 
-       /* img {
+
+        img  {
             max-width: 100%;
             width: 100%;
             height: auto;
@@ -12,14 +12,12 @@ main {
             margin-right: auto; 
             }
         }
-        */
 
-    a {
-        text-decoration: none;
-        &:hover {
-           color: tomato;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                color: tomato;
+            }
         }
-       }
-
-}
-}
