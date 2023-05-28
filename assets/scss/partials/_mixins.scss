@@ -1,25 +1,34 @@
 @mixin mainFont {
-    font-family: Work Sans, Futura, sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }
 
 @mixin fontSmall {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
+    line-height: 30px;
 }
 
 @mixin fontSmallBold {
     font-weight: 600;
     font-size: 16px;
+    line-height: 30px;
+}
+
+@mixin fontBold {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 @mixin fontMedium {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
-    line-height: 1.15;
+    line-height: 32px;
 }
 
 @mixin fontLarge {
     font-size: 32px;
     line-height: 1.5;
     font-weight: 600;
+    line-height: 48px;
 }

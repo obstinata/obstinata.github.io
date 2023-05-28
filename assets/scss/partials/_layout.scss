@@ -3,6 +3,9 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(204, 179, 255, 1) 100%);
+  background-attachment: fixed;
 
   header {
     h1 {
@@ -11,18 +14,6 @@ body {
 
   }
 
-  &.about {
-    background: pink;
-  }
-
-  &.contacts {
-    background: violet;
-  }
-
-  &.home {
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(204,179,255,1) 100%);
-  }
 
   h1 {
     @include mainFont;
@@ -34,51 +25,57 @@ body {
   h2 {
     @include mainFont;
     @include fontLarge;
+
   }
 
   p {
     @include mainFont;
     @include fontSmall;
-  
+
+
   }
 
 
-  .grid-container {
+  //HOME GRELHA
+
+  .grid-container-home {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat (4, 1fr);
     grid-template-rows: 100vh 70vh 70vh;
 
 
     @media (min-width: $large) {
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(12, 1fr);
       gap: 72px;
     }
 
     section {
-      //background: gray;
-      //border: 1px solid brown;
 
       &.intro {
         padding: 0px 20px 0 20px;
         grid-row: 1;
+        grid-column: 1 / span 4;
         display: flex;
         align-items: center;
         justify-content: center;
+
         h2 {
           @include fontLarge;
           color: $text-color;
-      
+
         }
+
         @media (min-width: $large) {
-          grid-column: 1 / span 6;
+          grid-column: 1 / span 12;
           grid-row: 1;
-          padding: 0px 300px 0 300px;
+          padding: 0px 250px 0 250px;
         }
       }
-      
+
 
       &.project-1 {
         grid-row: 2;
+        grid-column: 1 / span 4;
         background-image: url(/assets/images/project1.png);
         background-position: center;
         background-size: cover;
@@ -86,6 +83,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+
         @media (min-width: $large) {
           justify-content: end;
         }
@@ -97,7 +95,7 @@ body {
         @media (min-width: $large) {
           background-position: left;
           background-size: 60%;
-          grid-column: span 6;
+          grid-column: span 12;
 
           &.box {
             justify-self: end;
@@ -108,6 +106,7 @@ body {
 
       &.project-2 {
         grid-row: 3;
+        grid-column: 1 / span 4;
         background-image: url(/assets/images/project2.png);
         background-position: center;
         background-size: cover;
@@ -115,6 +114,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+
         @media (min-width: $large) {
           justify-content: start;
         }
@@ -124,133 +124,45 @@ body {
         }
 
         @media (min-width: $large) {
-          grid-column: span 6;
+          grid-column: span 12;
           background-position: right;
           background-size: 60%;
 
         }
       }
 
-      &.about {
-        padding: 150px 20px 0 20px;
+    }
+  }
+}
+
+  section {
+    &.about {
+      padding: 150px 20px 0 20px;
+
+      @media (min-width: $large) {
+        padding: 100px 100px 0 100px;
+      }
+
+      @media (min-width: $large) {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
 
         &.profile-pic {
-          grid-row: 1;
-        }
+          max-width: 50%;
+          display: flex;
 
-        &.about-text {
-          grid-row: 2;
         }
-
       }
 
     }
   }
 
 
-}
 
 
 
-
-/* 
-
-  p {
-    @include fontSmall;
-  }
-
-  .grid-container {
-    position: absolute;
-    align-items: center;
-    height: 100vh;
-    background-color: lightgray;
-    padding: 0;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3fr;
-
-
-
-    section {
-      background: gray;
-      padding: 20px;
-
-      @media (min-width: $medium) {
-        padding: 100px;
-      }
-
-      border: 1px solid brown;
-
-      h2 {
-        @include mainFont;
-        @include fontLarge;
-      }
-
-      &.intro {
-        height: 100vh;
-        position: relative;
-        grid-row: 1fr;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 50px;
-
-      }
-
-      &.project-1 {
-        position: relative;
-        display: flex;
-        grid-row: 2fr;
-
-        &.spotify {
-          position: relative;
-        }
-
-        h2 {
-          @include fontMedium;
-        }
-      }
-
-      &.project-2 {
-        position: relative;
-        display: flex;
-        grid-row: 3fr;
-
-        &.artology {
-          position: relative;
-        }
-
-        h2 {
-          @include fontMedium;
-        }
-      }
-
-
-
-      &.about {
-        grid-column: 1 / span 6;
-        position: relative;
-      }
-    }
-
-    @media (min-width: $medium) {
-      .grid-container {
-        grid-template-columns: repeat(6, 1fr);
-
-        section {
-          &.intro {
-            grid-column: 1 / span 6;
-            top: 0;
-          }
-        }
-      }
-    }
-  }
-
-}
-
-*/
 
 
 /* body {

@@ -1,23 +1,74 @@
 
 .about {
 
+    h2 {
+        color: $text-color;
+    }
 
-        img  {
-            max-width: 100%;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin-left: auto;
-            border-radius: 50%;
-            margin-right: auto; 
-            }
+    .meaning {
+        font-weight: 400;
+    }
+    p {
+        color: $text-color;
+    }
+
+    h3 {
+        @include mainFont;
+        @include fontBold;
+        color: $text-color;
+    }
+
+    img {
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        border-radius: 50%;
+        margin-right: auto;
+        @media (min-width: $large) {
+            max-width: none;
         }
 
 
-        a {
-            text-decoration: none;
+    }
+}
 
-            &:hover {
-                color: tomato;
-            }
-        }
+.about-text {
+    max-width: 768px;
+
+    @media (min-width: $large) {
+        max-width: 50%;
+    }
+
+}
+
+.title-about-text {
+    text-align: center;
+
+    @media (min-width: $large) {
+        text-align: left;
+        padding-left: 30px;
+    }
+}
+
+.button-resume {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding-top: 20px;
+
+    @media (min-width: $large) {
+        margin: 0;
+        text-align: left;
+        padding-left: 30px;
+    }
+
+}
+
+.paragraph-about {
+
+    @media (min-width: $small) {
+        padding: 20px 30px 20px 30px;
+    }
+}
