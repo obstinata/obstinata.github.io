@@ -2,20 +2,20 @@
 .about {
 
     h2 {
-        color: $text-color;
+        color: $main-color;
     }
 
     .meaning {
         font-weight: 400;
     }
     p {
-        color: $text-color;
+        color: $main-color;
     }
 
     h3 {
         @include mainFont;
         @include fontBold;
-        color: $text-color;
+        color: $main-color;
     }
 
     img {
@@ -35,9 +35,7 @@
 }
 
 .about-text {
-    max-width: 768px;
-
-    @media (min-width: $large) {
+    @media (min-width: $medium) {
         max-width: 50%;
     }
 
@@ -46,7 +44,7 @@
 .title-about-text {
     text-align: center;
 
-    @media (min-width: $large) {
+    @media (min-width: $medium) {
         text-align: left;
         padding-left: 30px;
     }
@@ -58,7 +56,7 @@
     width: 50%;
     padding-top: 20px;
 
-    @media (min-width: $large) {
+    @media (min-width: $medium) {
         margin: 0;
         text-align: left;
         padding-left: 30px;
