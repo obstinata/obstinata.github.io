@@ -8,21 +8,7 @@ url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&dis
 "partials/about",
 "partials/layout",
 "partials/footer",
-"partials/home",
-"partials/animations"
-;
+"partials/home";
 
 
-button.primary {
-    border: 1px solid #f00;
-    color: blue;
-    padding: 6px 10px;
-    font-size: 18px;
-    background: green;
-  }
-  
-  button.secondary {
-    @extend .primary;
-    background: red;
-  }
 

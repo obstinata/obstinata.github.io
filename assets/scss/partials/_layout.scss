@@ -153,6 +153,7 @@ body {
   figure {
     &.thumbnail {
       grid-area: 1 / 1 / 2 / span 4;
+      height: 300px;
 
       @media (min-width: $large) {
         grid-area: 1 / 1 / 2 / span 12;
@@ -160,7 +161,7 @@ body {
 
       img {
         width: 100%;
-        height: 50%;
+        height: 100%;
         object-fit: cover;
       }
     }
@@ -234,10 +235,17 @@ body {
       @media (min-width: $large) {
       display: flex;
       column-gap: 16px;
+      .challenge {
+        width: 50%;
+      }
+
+      .segment {
+        width: 50%;
       }
     }
   }
 
+}
 }
 }
 
