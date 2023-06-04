@@ -14,12 +14,44 @@ footer {
 
     h2 {
         text-align: center;
+        @include fontLargeBold;
     }
 
     p {
         text-align: center;
         line-height: 140%;
     }
+
+
+    .social-media {
+        display: flex;
+        column-gap: 16pxs;
+    }
+    .linkedin {
+        background: transparent;
+        border: none;
+        display: content;
+        cursor: pointer;
+
+        svg {
+            stroke: $primary-color;
+        }
+
+    }
+
+    .behance {
+        background: transparent;
+        border: none;
+        display: content;
+        cursor: pointer;
+
+        svg {
+            color: $primary-color;
+        }
+    }
+
+    
+
 }
 
 .footer-p {

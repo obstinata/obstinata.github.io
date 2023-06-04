@@ -1,0 +1,95 @@
+.grid-container-project {
+    color: $main-color;
+
+    h2 {
+        @include mainFont;
+        @include fontMedium;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        @include mainFont;
+        @include fontLarge;
+    }
+
+    h4 {
+        @include mainFont;
+        @include fontXLargeBold;
+    }
+
+
+    h5 {
+        @include mainFont;
+        @include fontSmallBold;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        @include mainFont;
+        @include fontSmall;
+        margin: 0;
+    }
+
+    figcaption {
+        @include mainFont;
+        @include fontCaption;
+        color: #636363;
+    }
+
+    .process {
+        h4 {
+            @include fontMedium;
+        }
+    }
+
+
+
+    .card {
+        background-color: white;
+        width: 230px;
+        height: 270px;
+        border-radius: 16px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        padding: 24px;
+    }
+
+
+    .hmw-card {
+        background-color: white;
+        width: 250px;
+        height: 200px;
+        border-radius: 16px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        padding: 24px;
+    }
+
+    article {
+        padding-top: 48px;
+    }
+
+    .topics {
+        padding-top: 24px;
+    }
+
+    .intro-understanding {
+        max-width: 671px;
+    }
+
+    .chips {
+        background: $primary-color;
+        padding-left: 8px;
+        padding-right: 8px;
+        border-radius: 8px;
+        color: white;
+    }
+}
+
+.thumbnail {
+    margin: 0;
+}

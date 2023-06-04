@@ -36,5 +36,7 @@ var btnToggleMenu = document.querySelector(".btn--toggle-menu");
 function toggleMenu() {
   var mainNav = document.querySelector("#navbar");
   mainNav.classList.toggle("open-menu");
+  document.body.classList.toggle("no-scroll");
 }
 btnToggleMenu.addEventListener("click", toggleMenu);
+

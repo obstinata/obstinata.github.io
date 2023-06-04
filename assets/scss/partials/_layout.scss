@@ -7,9 +7,13 @@ body {
   background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(204, 179, 255, 1) 100%);
   background-attachment: fixed;
 
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+
   header {
     h1 {
-      @include fontLarge;
+      @include fontLargeBold;
     }
 
   }
@@ -167,15 +171,32 @@ body {
     }
 
     &.data {
-      grid-area: 4 / 1 / 5 / span 4;
+      grid-area: 5 / 1 / 6 / span 4;
+
+
       @media (min-width: $large) {
-      grid-area: 3 / 1 / 6 / 8;
+        grid-area: 3 / 8 / 5 / 13;
       }
 
       img {
         width: 100%;
+
         @media (min-width: $large) {
-        max-width: 595px;
+          max-width: 595px;
+        }
+      }
+    }
+
+    &.app-bench {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 50%;
+
+        @media (min-width: $large) {
+          width: 100%;
+          max-width: 500px;
         }
       }
     }
@@ -196,59 +217,159 @@ body {
       justify-content: space-between;
 
       @media (min-width: $large) {
-      grid-area: 2 / 9 / 3 / 13;
+        grid-area: 2 / 9 / 3 / 13;
       }
     }
 
     &.why {
-      grid-area: 5 / 1 / 6 / span 4;
+      grid-area: 4 / 1 / 5 / span 4;
+
       @media (min-width: $large) {
-      grid-area: 3 / 8 / 5 / 13;
-    }
-  }
-
-  &.work-process {
-    grid-area: 6 / 1 / 8 / span 4;
-    @media (min-width: $large) {
-    grid-area: 6 / 1 / 7 / span 12;
-    flex-direction: column;
-    display: flex;
-    }
-
-    .process {
-      @media (min-width: $large) {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-
-  }
-
-  &.understanding {
-    grid-area: 8 / 1 / 10 / span 4;
-    display: flex;
-    flex-direction: column;
-    @media (min-width: $large) {
-    grid-area: 7 / 1 / 8 / span 12;
-    }
-    .topics {
-      @media (min-width: $large) {
-      display: flex;
-      column-gap: 16px;
-      .challenge {
-        width: 50%;
-      }
-
-      .segment {
-        width: 50%;
+        grid-area: 3 / 1 / 6 / 8;
       }
     }
+
+    &.work-process {
+      grid-area: 6 / 1 / 8 / span 4;
+
+      @media (min-width: $large) {
+        grid-area: 6 / 1 / 7 / span 12;
+        flex-direction: column;
+        display: flex;
+      }
+
+      .process {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 24px;
+        gap: 14px;
+
+
+        @media (min-width: $large) {
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+      }
+
+    }
+
+    &.understanding {
+      grid-area: 8 / 1 / 10 / span 4;
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: $large) {
+        grid-area: 7 / 1 / 8 / span 12;
+      }
+
+      .topics {
+        @media (min-width: $large) {
+          display: flex;
+          column-gap: 16px;
+
+          .challenge {
+            width: 50%;
+          }
+
+          .segment {
+            width: 50%;
+          }
+        }
+      }
+
+    }
+
+    &.benchmark {
+      grid-area: 10 / 1 / 12 / span 4;
+
+      .apps {
+        ul {
+          display: flex;
+          gap: 24px;
+        }
+      }
+
+      .three {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      .list {
+        margin-top: 16px;
+      }
+
+      .features {
+        padding-top: 32px;
+      }
+
+
+      .benchmarking {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media (min-width: $medium) {
+        .content-bench {
+          display: flex;
+          justify-content: space-around;
+        }
+
+        .features {
+          padding-top: 0;
+        }
+      }
+
+      @media (min-width: $large) {
+        grid-area: 8 / 1 / 9 / span 12;
+
+        .benchmarking {
+          flex-direction: row;
+          gap: 24px;
+          justify-content: space-around;
+        }
+
+        .content-bench {
+          display: block;
+        }
+
+        .features {
+          padding-top: 32px;
+        }
+      }
+    }
+
+    &.hmw {
+      grid-area: 12 / 1 / 14 / span 4;
+
+      .three-hmw {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 24px;
+        gap: 14px;
+
+
+        @media (min-width: $medium) {
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+      }
+
+      @media (min-width: $large) {
+        grid-area: 9 / 1 / 10 / span 12;
+
+    }
   }
-
-}
-}
+  }
 }
 
+
+
+//ABOUT
 
 section {
   &.about {
@@ -267,6 +388,7 @@ section {
       &.profile-pic {
         max-width: 50%;
         display: flex;
+
 
       }
     }

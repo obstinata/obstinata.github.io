@@ -2,6 +2,12 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+@mixin fontCaption {
+    font-weight: 500;
+    font-size: rem(12px);
+    line-height: 20px;
+}
+
 @mixin fontSmall {
     font-weight: 500;
     font-size: rem(16px);
@@ -28,6 +34,18 @@
 
 @mixin fontLarge {
     font-size: rem(32px);
+    font-weight: 500;
+    line-height: 48px;
+}
+
+@mixin fontLargeBold {
+    font-size: rem(32px);
     font-weight: 600;
     line-height: 48px;
+}
+
+@mixin fontXLargeBold {
+    font-size: rem(40px);
+    font-weight: 600;
+    line-height: 52px;
 }
