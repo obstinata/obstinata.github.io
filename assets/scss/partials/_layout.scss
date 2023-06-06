@@ -4,7 +4,7 @@ body {
   display: flex;
   flex-direction: column;
   background: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(204, 179, 255, 1) 100%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(204, 179, 255) 100%);
   background-attachment: fixed;
 
   &.no-scroll {
@@ -39,6 +39,21 @@ body {
 
   }
 
+  .normal-link {
+    text-decoration: none;
+    background: $primary-color;
+    padding: 4px;
+    color: white;
+    border: 1px solid $primary-color;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: white;
+      border: 1px solid $main-color;
+      color: $main-color;
+    }
+    
+  }
 
   //HOME GRELHA
 
@@ -144,7 +159,6 @@ body {
 .grid-container-project {
   display: grid;
   grid-template-columns: repeat (4, 1fr);
-  grid-template-rows: repeat (60, 1fr);
   margin: 150px 20px 0 20px;
 
   @media (min-width: $large) {
@@ -156,11 +170,11 @@ body {
 
   figure {
     &.thumbnail {
-      grid-area: 1 / 1 / 2 / span 4;
+      grid-column: 1 / span 4;
       height: 300px;
 
       @media (min-width: $large) {
-        grid-area: 1 / 1 / 2 / span 12;
+        grid-column: 1 / span 12;
       }
 
       img {
@@ -171,11 +185,11 @@ body {
     }
 
     &.data {
-      grid-area: 5 / 1 / 6 / span 4;
+      grid-column: 1 / span 4;
 
 
       @media (min-width: $large) {
-        grid-area: 3 / 8 / 5 / 13;
+        grid-column: 8 / 13;
       }
 
       img {
@@ -187,81 +201,54 @@ body {
       }
     }
 
-    &.app-bench {
-      display: flex;
-      justify-content: center;
+  }
 
-      img {
-        width: 50%;
-
-        @media (min-width: $large) {
-          width: 100%;
-          max-width: 500px;
-        }
+  div {
+    &.button-case {
+      grid-column: 1 / span 4;
+      text-align: center;
+      padding-top: 32px;
+      @media (min-width: $large) {
+        grid-column: 5 / 9;
       }
     }
   }
 
   article {
     &.intro-moody {
-      grid-area: 2 / 1 / 3 / span 4;
+      grid-column: 1 / span 4;
 
       @media (min-width: $large) {
-        grid-area: 2 / 1 / 3 / 7;
+        grid-column: 1 / 7;
       }
     }
 
     &.specs {
-      grid-area: 3 / 1 / 4 / span 4;
+      grid-column: 1 / span 4;
       display: flex;
       justify-content: space-between;
 
       @media (min-width: $large) {
-        grid-area: 2 / 9 / 3 / 13;
+        grid-column: 9 / 13;
       }
     }
 
     &.why {
-      grid-area: 4 / 1 / 5 / span 4;
+      grid-column: 1 / span 4;
 
       @media (min-width: $large) {
-        grid-area: 3 / 1 / 6 / 8;
+        grid-column: 1 / 8;
       }
     }
 
-    &.work-process {
-      grid-area: 6 / 1 / 8 / span 4;
-
-      @media (min-width: $large) {
-        grid-area: 6 / 1 / 7 / span 12;
-        flex-direction: column;
-        display: flex;
-      }
-
-      .process {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 24px;
-        gap: 14px;
-
-
-        @media (min-width: $large) {
-          flex-direction: row;
-          justify-content: space-evenly;
-        }
-      }
-
-    }
 
     &.understanding {
-      grid-area: 8 / 1 / 10 / span 4;
+      grid-column: 1 / span 4;
       display: flex;
       flex-direction: column;
 
       @media (min-width: $large) {
-        grid-area: 7 / 1 / 8 / span 12;
+        grid-column: 1 / span 12;
       }
 
       .topics {
@@ -281,89 +268,8 @@ body {
 
     }
 
-    &.benchmark {
-      grid-area: 10 / 1 / 12 / span 4;
+    
 
-      .apps {
-        ul {
-          display: flex;
-          gap: 24px;
-        }
-      }
-
-      .three {
-        display: flex;
-        gap: 16px;
-        margin-bottom: 16px;
-      }
-
-      .list {
-        margin-top: 16px;
-      }
-
-      .features {
-        padding-top: 32px;
-      }
-
-
-      .benchmarking {
-        display: flex;
-        flex-direction: column;
-      }
-
-      @media (min-width: $medium) {
-        .content-bench {
-          display: flex;
-          justify-content: space-around;
-        }
-
-        .features {
-          padding-top: 0;
-        }
-      }
-
-      @media (min-width: $large) {
-        grid-area: 8 / 1 / 9 / span 12;
-
-        .benchmarking {
-          flex-direction: row;
-          gap: 24px;
-          justify-content: space-around;
-        }
-
-        .content-bench {
-          display: block;
-        }
-
-        .features {
-          padding-top: 32px;
-        }
-      }
-    }
-
-    &.hmw {
-      grid-area: 12 / 1 / 14 / span 4;
-
-      .three-hmw {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 24px;
-        gap: 14px;
-
-
-        @media (min-width: $medium) {
-          flex-direction: row;
-          justify-content: space-evenly;
-        }
-      }
-
-      @media (min-width: $large) {
-        grid-area: 9 / 1 / 10 / span 12;
-
-    }
-  }
   }
 }
 
