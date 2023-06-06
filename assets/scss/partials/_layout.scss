@@ -39,8 +39,11 @@ body {
 
   }
 
-  .normal-link {
+  a {
     text-decoration: none;
+  }
+
+  .normal-link {
     background: $primary-color;
     padding: 4px;
     color: white;

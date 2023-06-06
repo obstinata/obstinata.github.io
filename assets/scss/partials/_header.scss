@@ -88,18 +88,28 @@ header {
 
 
 
+
+      
+
+
     a {
         color: $main-color;
-        text-decoration: none;
         display: block;
 
         &:hover {
             color: $primary-color;
+            text-decoration: 1.5px overline $primary-color;
+            &.logo {
+                text-decoration: none;
+            }
         }
 
         &.active {
-            text-decoration: 2.5px wavy overline $primary-color;
+            text-decoration: 1.5px overline $primary-color;
         }
+
+
+       
     }
 
     li {

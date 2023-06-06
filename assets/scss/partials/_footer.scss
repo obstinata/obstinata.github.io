@@ -25,37 +25,32 @@ footer {
 
     .social-media {
         display: flex;
-        column-gap: 16pxs;
     }
-    .linkedin {
+
+
+    .media-btn {
         background: transparent;
         border: none;
         display: content;
         cursor: pointer;
 
-        svg {
-            stroke: $primary-color;
+        :hover {
+            border-radius: 50px;
+            border: 1px solid $main-color;
         }
 
-    }
-
-    .behance {
-        background: transparent;
-        border: none;
-        display: content;
-        cursor: pointer;
-
-        svg {
-            color: $primary-color;
+        :hover .background{
+            fill: white;
         }
+
+        :hover .fill-color{
+            fill: $main-color;
+        }
+
+
     }
 
     
 
 }
 
-.footer-p {
-    margin-bottom: 0;
-    @include fontSmall;
-    @include mainFont;
-}
