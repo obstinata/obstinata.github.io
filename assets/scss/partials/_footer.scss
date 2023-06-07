@@ -9,7 +9,6 @@ footer {
     flex-direction: column;
     align-items: center;
     color: $main-color;
-
     z-index: 1;
 
     h2 {
@@ -35,11 +34,11 @@ footer {
             border: 1px solid $main-color;
         }
 
-        :hover .background{
+        :hover .background {
             fill: white;
         }
 
-        :hover .fill-color{
+        :hover .fill-color {
             fill: $main-color;
         }
 
@@ -48,4 +47,3 @@ footer {
 
 
 }
-

@@ -1,8 +1,8 @@
 header {
     background-attachment: fixed;
-            background: rgb(255, 255, 255);
-            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(204, 179, 255) 100%);
-            background-attachment: fixed;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(204, 179, 255) 100%);
+    background-attachment: fixed;
 
     justify-content: space-between;
     color: $main-color;
@@ -87,7 +87,7 @@ header {
 
 
 
-      
+
 
 
     a {
@@ -97,6 +97,7 @@ header {
         &:hover {
             color: $primary-color;
             text-decoration: 1.5px overline $primary-color;
+
             &.logo {
                 text-decoration: none;
             }
@@ -107,7 +108,7 @@ header {
         }
 
 
-       
+
     }
 
     li {
@@ -170,7 +171,7 @@ header {
                 &.moody-link {
                     border-radius: 0;
                 }
-    
+
                 &.artology-link {
                     border-radius: 0;
                 }

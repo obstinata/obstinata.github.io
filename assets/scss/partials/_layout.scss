@@ -55,7 +55,7 @@ body {
       border: 1px solid $main-color;
       color: $main-color;
     }
-    
+
   }
 
   //HOME GRELHA
@@ -211,6 +211,7 @@ body {
       grid-column: 1 / span 4;
       text-align: center;
       padding-top: 32px;
+
       @media (min-width: $large) {
         grid-column: 5 / 9;
       }
@@ -271,7 +272,7 @@ body {
 
     }
 
-    
+
 
   }
 }

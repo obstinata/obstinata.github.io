@@ -4,122 +4,128 @@
 
 h3 {
   &.project-title {
-  @include mainFont;
-  @include fontBold;
+    @include mainFont;
+    @include fontBold;
   }
 }
 
 .box {
-    position: relative;
-    display: grid;
-    padding: 48px 48px 48px 48px;
-    max-width: 350px;
-    border-radius: 32px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    background: rgb(255,255,255, 0.8);
-    backdrop-filter: blur(10px);
-    @media (min-width: $large) {
-        margin-left: 100px;
-        margin-right: 100px;
-        background: none;
-    }
+  position: relative;
+  display: grid;
+  padding: 48px 48px 48px 48px;
+  max-width: 350px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: rgb(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: calc(-100% + 5px);
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255,255,255,1);
-      filter: blur(5px);
-      transition: 0.5s;
-    }
-
-    &:hover {
-      &:before {
-        bottom: 0;
-      }
-      .box-content{
-        color: $primary-color;
-      }
-    }
+  @media (min-width: $large) {
+    margin-left: 100px;
+    margin-right: 100px;
+    background: none;
   }
 
-  .box-content {
-    position: relative;
-    color: $main-color;
-    z-index: 2;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: calc(-100% + 5px);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    filter: blur(5px);
     transition: 0.5s;
   }
 
-
-
-
-  .my-button {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid $main-color;
-    color: $main-color;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 32px;
-    line-height: 1;
-    padding: 16px 16px 16px;
-    text-decoration: none;
-    cursor: pointer;
-    background: #fff;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    span {
-      &:first-child {
-        position: relative;
-        transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-        z-index: 10;
-      }
-      &:last-child {
-        color: white;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
-        z-index: 100;
-        opacity: 0;
-        top: 50%;
-        left: 50%;
-        transform: translateY(225%) translateX(-50%);
-        height: 14px;
-        line-height: 1;
-      }
+  &:hover {
+    &:before {
+      bottom: 0;
     }
-    &:after {
-      content: "";
+
+    .box-content {
+      color: $primary-color;
+    }
+  }
+}
+
+.box-content {
+  position: relative;
+  color: $main-color;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+
+
+
+.my-button {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid $main-color;
+  color: $main-color;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 32px;
+  line-height: 1;
+  padding: 16px 16px 16px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  span {
+    &:first-child {
+      position: relative;
+      transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+      z-index: 10;
+    }
+
+    &:last-child {
+      color: white;
+      display: block;
       position: absolute;
-      bottom: -50%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      transform-origin: bottom center;
-      transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
-      transform: skewY(9.3deg) scaleY(0);
-      z-index: 50;
-      
+      bottom: 0;
+      transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+      z-index: 100;
+      opacity: 0;
+      top: 50%;
+      left: 50%;
+      transform: translateY(225%) translateX(-50%);
+      height: 14px;
+      line-height: 1;
     }
-    &:hover {
-      &:after {
-        transform-origin: bottom center;
-        transform: skewY(9.3deg) scaleY(2);
-      }
-      span {
-        &:last-child {
-          transform: translateX(-50%) translateY(-100%);
-          opacity: 1;
-          transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
-        }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+
+  }
+
+  &:hover {
+    &:after {
+      transform-origin: bottom center;
+      transform: skewY(9.3deg) scaleY(2);
+    }
+
+    span {
+      &:last-child {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 1;
+        transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
       }
     }
   }
-  
+}
