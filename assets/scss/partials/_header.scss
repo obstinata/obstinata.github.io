@@ -1,9 +1,8 @@
 header {
     background-attachment: fixed;
-    background: linear-gradient(to bottom,
-            rgba(204, 179, 255, 1) 00%,
-            rgba(204, 179, 255, 1) 0%,
-            rgba(204, 179, 255, 0) 100%);
+            background: rgb(255, 255, 255);
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(204, 179, 255) 100%);
+            background-attachment: fixed;
 
     justify-content: space-between;
     color: $main-color;
@@ -43,7 +42,6 @@ header {
 
         @media (min-width: $medium) {
             display: flex;
-            //flex-direction: row;
         }
 
         &.open-menu {
@@ -136,6 +134,15 @@ header {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         z-index: 1;
 
+        @media (max-width: $medium) {
+            position: relative;
+            display: block;
+            border-radius: 0;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+        }
+
         a {
             color: $main-color;
             padding: 12px 16px;
@@ -154,6 +161,31 @@ header {
             &.artology-link {
                 border-radius: 0 0 14px 14px;
             }
+
+            @media (max-width: $medium) {
+
+                padding: 8px;
+                @include fontMediumRegular;
+
+                &.moody-link {
+                    border-radius: 0;
+                }
+    
+                &.artology-link {
+                    border-radius: 0;
+                }
+
+                &:hover {
+                    background-color: transparent;
+                    color: $primary-color;
+                    text-decoration: 1.5px overline $primary-color;
+                }
+
+                &.active {
+                    text-decoration: 1.5px overline $primary-color;
+                }
+            }
+
         }
     }
 

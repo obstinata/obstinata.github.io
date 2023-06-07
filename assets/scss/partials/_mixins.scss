@@ -26,6 +26,18 @@
     line-height: 30px;
 }
 
+@mixin fontRegular {
+    font-weight: 500;
+    font-size: rem(20px);
+    line-height: 30px;
+}
+
+@mixin fontMediumRegular {
+    font-size: rem(24px);
+    font-weight: 500;
+    line-height: 32px;
+}
+
 @mixin fontMedium {
     font-size: rem(24px);
     font-weight: 600;
