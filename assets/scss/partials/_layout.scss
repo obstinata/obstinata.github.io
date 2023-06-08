@@ -34,18 +34,33 @@ body {
 
   p {
     @include mainFont;
-    @include fontSmall;
+    @include fontRegular;
+    
+    @media (min-width: $large) {
+      @include fontSmallDesk;
+      
+    }
 
 
   }
 
+  
+
   a {
     text-decoration: none;
+
+    .button-font {
+      @include mainFont;
+      @include fontRegular;
+      @media (min-width: $large) {
+        @include fontSmallDesk;
+      }
+    }
   }
 
   .normal-link {
     background: $primary-color;
-    padding: 4px;
+    padding: 8px;
     color: white;
     border: 1px solid $primary-color;
     border-radius: 8px;

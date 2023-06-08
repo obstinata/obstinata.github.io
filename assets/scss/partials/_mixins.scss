@@ -8,15 +8,27 @@
     line-height: 20px;
 }
 
-@mixin fontSmall {
+@mixin fontSmallDesk {
     font-weight: 500;
     font-size: rem(16px);
     line-height: 30px;
 }
 
-@mixin fontSmallBold {
+@mixin fontSmallBoldDesk {
     font-weight: 600;
     font-size: rem(16px);
+    line-height: 30px;
+}
+
+@mixin fontSmall {
+    font-weight: 500;
+    font-size: rem(18px);
+    line-height: 30px;
+}
+
+@mixin fontSmallBold {
+    font-weight: 600;
+    font-size: rem(18px);
     line-height: 30px;
 }
 
@@ -34,7 +46,7 @@
 
 @mixin fontMediumRegular {
     font-size: rem(24px);
-    font-weight: 500;
+    font-weight: 400;
     line-height: 32px;
 }
 
