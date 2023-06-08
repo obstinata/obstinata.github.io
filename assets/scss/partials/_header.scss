@@ -96,15 +96,13 @@ header {
 
         &:hover {
             color: black;
-            text-decoration: 1.5px overline white;
+            text-decoration: 1.5px overline $main-color;
 
-            &.logo {
-                text-decoration: none;
-            }
         }
 
         &.active {
-            text-decoration: 1.5px overline white;
+            text-decoration: 1.5px overline $main-color;
+            
         }
 
 
@@ -179,11 +177,11 @@ header {
                 &:hover {
                     background-color: transparent;
                     color: black;
-                    text-decoration: 1.5px overline white;
+                    text-decoration: 1.5px overline $main-color;
                 }
 
                 &.active {
-                    text-decoration: 1.5px overline white;
+                    text-decoration: 1.5px overline $main-color;
                 }
             }
 

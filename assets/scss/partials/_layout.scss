@@ -35,16 +35,16 @@ body {
   p {
     @include mainFont;
     @include fontRegular;
-    
+
     @media (min-width: $large) {
       @include fontSmallDesk;
-      
+
     }
 
 
   }
 
-  
+
 
   a {
     text-decoration: none;
@@ -52,6 +52,7 @@ body {
     .button-font {
       @include mainFont;
       @include fontRegular;
+
       @media (min-width: $large) {
         @include fontSmallDesk;
       }
@@ -67,8 +68,8 @@ body {
 
     &:hover {
       background: black;
-    color: white;
-    border: 1px solid black;
+      color: white;
+      border: 1px solid black;
     }
 
   }
