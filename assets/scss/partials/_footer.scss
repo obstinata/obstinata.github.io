@@ -3,7 +3,6 @@ footer {
     margin: auto;
     height: auto;
     padding-top: 72px;
-    padding-bottom: 88px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -46,6 +45,11 @@ footer {
         }
 
 
+    }
+
+    .copy {
+        @include fontCaption;
+        padding-top: 32px;
     }
 
 
