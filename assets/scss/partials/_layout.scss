@@ -59,16 +59,16 @@ body {
   }
 
   .normal-link {
-    background: $primary-color;
     padding: 8px;
-    color: white;
-    border: 1px solid $primary-color;
-    border-radius: 8px;
+    border-radius: 50px;
+    background-color: white;
+    border: 1px solid $main-color;
+    color: $main-color;
 
     &:hover {
-      background-color: white;
-      border: 1px solid $main-color;
-      color: $main-color;
+      background: black;
+    color: white;
+    border: 1px solid black;
     }
 
   }

@@ -95,8 +95,8 @@ header {
         display: block;
 
         &:hover {
-            color: $primary-color;
-            text-decoration: 1.5px overline $primary-color;
+            color: black;
+            text-decoration: 1.5px overline white;
 
             &.logo {
                 text-decoration: none;
@@ -104,7 +104,7 @@ header {
         }
 
         &.active {
-            text-decoration: 1.5px overline $primary-color;
+            text-decoration: 1.5px overline white;
         }
 
 
@@ -178,12 +178,12 @@ header {
 
                 &:hover {
                     background-color: transparent;
-                    color: $primary-color;
-                    text-decoration: 1.5px overline $primary-color;
+                    color: black;
+                    text-decoration: 1.5px overline white;
                 }
 
                 &.active {
-                    text-decoration: 1.5px overline $primary-color;
+                    text-decoration: 1.5px overline white;
                 }
             }
 
